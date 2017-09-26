@@ -1,0 +1,23 @@
+<section>
+    
+    
+    <h3 ng-bind="booksComponent.mainTitle"></h3>
+    
+    <ul>
+    	<li ng-repeat="book in booksComponent.allbooks">{{book.isbn}}
+    		<ul>
+    			<li>{{book.titulo}} - {{book.autor}} <input type="button" ng-click="booksComponent.actions.deleteBook(book.isbn)" value="Borrar"></li>
+    		</ul>
+    	</li>
+    </ul>
+    
+    Add
+    <form>
+    	titulo<input type="text" id="titulo" ng-required="required">
+    	autor<input type="text" id="autor" required="required">
+    	fecPublicacion<input type="text" id="fecPublicacion">
+    	disponible<input type="text" id="disponible">
+    	<input type="submit" ng-click="booksComponent.actions.addBook()">
+    </form>
+    
+</section>
